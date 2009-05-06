@@ -194,7 +194,12 @@
 
 - (IBAction)basicRuleOfSix:(id)sender
 {
-	basicRuleOfSix = 1;
+    if ([sender state]) {
+        basicRuleOfSix = 1;
+    } else {
+        basicRuleOfSix = 0;
+    }
+    NSLog(@"basicRuleofSix = %d", basicRuleOfSix);
 }
 
 

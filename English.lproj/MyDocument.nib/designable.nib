@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100289"/>
+			<integer value="100286"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -299,8 +299,9 @@
 													<int key="NSCellFlags2">0</int>
 													<string key="NSContents"/>
 													<reference key="NSSupport" ref="683686405"/>
+													<int key="NSTag">1</int>
 													<reference key="NSControlView" ref="425453649"/>
-													<int key="NSButtonFlags">1210864127</int>
+													<int key="NSButtonFlags">1211912703</int>
 													<int key="NSButtonFlags2">2</int>
 													<object class="NSCustomResource" key="NSNormalImage">
 														<string key="NSClassName">NSImage</string>
@@ -1050,12 +1051,12 @@
 						<reference key="object" ref="484583219"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="425453649"/>
 							<reference ref="30102504"/>
 							<reference ref="855073139"/>
 							<reference ref="301647162"/>
 							<reference ref="840888959"/>
 							<reference ref="438489591"/>
+							<reference ref="425453649"/>
 						</object>
 						<reference key="parent" ref="1057591993"/>
 					</object>
