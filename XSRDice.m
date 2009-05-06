@@ -40,47 +40,46 @@
 - (IBAction)rollBasic:(id)sender
 {
 	NSInteger dicePool;
-	NSInteger roll;
-	NSString *rollToPrint;
+    NSInteger roll;
+    NSInteger glitchcounter = 0;
+	NSInteger hits = 0;    
+    NSInteger i;
+    
 	NSMutableArray *diceRolls;
 	NSString *rollList;
-	NSString *glitch;
-	NSInteger i = 0;
-	NSInteger hits = 0;
-	NSInteger glitchcounter = 0;
-	NSInteger glitchcheck = 0;	
 	
-	dicePool = [basicDicePool intValue];
+    
+    dicePool = [basicDicePool intValue];
 	diceRolls = [[NSMutableArray alloc] init];
 	rollList = [[NSString alloc] initWithString:@"Dice Rolls: "];
 
 
 	if (dicePool > 0) 
 	{
-		
-		for (i = 0; i < dicePool; i++)
+		for (i = 0; i < dicePool; i++)      // Roll Dice
 		{
-			
 			roll = (random() % 6) + 1;
 			
-			if (roll >= 5) {
+			if (roll >= 5) {        // Hit Counter
 				hits++;
 				if (roll == 6 && basicRuleOfSix == 1) {
 					dicePool++;
 				}
 			}
 			
-			if (roll == 1) {
+			if (roll == 1) {    // Glitch Counter
 				glitchcounter++;
 			}
 			
-			[diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];
+			[diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];   // Insert roll into array
 		}
 
-		[diceRolls sortUsingSelector:@selector(compare:)];
+		[diceRolls sortUsingSelector:@selector(compare:)];      // Order rolls High to Low
 		
+        NSInteger glitchcheck = 0;
 		glitchcheck = ((dicePool/2) + (dicePool%2));
 		
+        NSString *glitch;       // Set Glitch Output
 		if (glitchcounter >= glitchcheck) {
 			if (hits > 0){
 				glitch = [[NSString alloc] initWithString:@"Glitch\n"];
@@ -91,6 +90,7 @@
 			glitch = [[NSString alloc] initWithString:@" "];
 		}
 		
+        NSString *rollToPrint;      // Set Roll Output
 		for (i = dicePool-1; i >= 0; i--) {
 			rollToPrint = [diceRolls objectAtIndex:i];
 			rollList = [rollList stringByAppendingFormat:@"%@ ", rollToPrint];

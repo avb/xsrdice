@@ -6,6 +6,10 @@ build/*
 # SVN directories
 .svn
 
+# Mercurial stuff
+.hg
+.hgignore
+
 # osx noise
 .DS_Store
 profile
