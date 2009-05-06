@@ -127,11 +127,13 @@
 		defaultTest = [[NSString alloc] initWithString:@"Default Test\n"];
 	} else 
 	{
-		dicePool = [advancedAttributePool intValue] + [advancedSkillPool intValue] + [advancedEdgePool intValue] + [advancedModifierPool intValue];
+		dicePool = [advancedAttributePool intValue] + [advancedSkillPool intValue] + [advancedEdgePool intValue];
 		if (dicePool == [advancedEdgePool intValue]) {
+            dicePool = dicePool + [advancedModifierPool intValue];
 			defaultTest = [[NSString alloc] initWithString:@"Longshot Test\n"];
 		} else {
-		defaultTest = [[NSString alloc] initWithString:@""];
+            dicePool = dicePool + [advancedModifierPool intValue];
+            defaultTest = [[NSString alloc] initWithString:@""];
 	}
 	}
 	diceRolls = [[NSMutableArray alloc] init];
@@ -147,7 +149,7 @@
 			
 			if (roll >= 5) {
 				hits++;
-				if (roll == 6 && [advancedEdgePool intValue]) {
+				if (roll == 6 && [advancedEdgePool intValue] && defaultTest != @"Longshot Test\n") {
 					dicePool++;
 				}
 			}
