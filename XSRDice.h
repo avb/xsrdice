@@ -38,6 +38,7 @@
 @interface XSRDice : NSObject {
 	NSInteger dicePool;
     NSInteger hits;
+    NSInteger glitchCounter;
     NSMutableArray *diceRolls;
     
 	NSInteger basicRuleOfSix;
@@ -58,6 +59,7 @@
 
 @property int dicePool;
 @property int hits;
+@property int glitchCounter;
 @property (retain) NSMutableArray *diceRolls;
 
 - (IBAction)rollBasic:(id)sender;

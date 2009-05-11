@@ -41,7 +41,7 @@
 {
     if (self = [super init])
     {
-        self.diceRolls = [[NSMutableArray alloc] init];
+        diceRolls = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -49,53 +49,55 @@
 @synthesize dicePool;
 @synthesize hits;
 @synthesize diceRolls;
+@synthesize glitchCounter;
 
 - (IBAction)rollBasic:(id)sender
 {
     NSInteger roll;
-    NSInteger glitchcounter = 0;
+ 
     NSInteger i;
     
 	NSString *rollList;
 	
     
-    self.dicePool = basicDicePool.intValue;
-    self.diceRolls.removeAllObjects;
-    self.hits = 0;
+    dicePool = basicDicePool.intValue;
+    diceRolls.removeAllObjects;
+    hits = 0;
+    glitchCounter = 0;
     
 	rollList = [[NSString alloc] initWithString:@"Dice Rolls: "];
 
 
-	if (self.dicePool > 0) 
+	if (dicePool > 0) 
 	{
-		for (i = 0; i < self.dicePool; i++)      // Roll Dice
+		for (i = 0; i < dicePool; i++)      // Roll Dice
 		{
 			roll = (random() % 6) + 1;
 			
 			if (roll >= 5) {        // Hit Counter
-				self.hits++;
+				hits++;
 				if (roll == 6 && basicRuleOfSix == 1) {
-					self.dicePool++;
+					dicePool++;
 				}
 			}
 			
 			if (roll == 1) {    // Glitch Counter
-				glitchcounter++;
+				glitchCounter++;
 			}
 			
-			[self.diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];   // Insert roll into array
+			[diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];   // Insert roll into array
 		}
 
-		[self.diceRolls sortUsingSelector:@selector(compare:)];      // Order rolls High to Low
+		[diceRolls sortUsingSelector:@selector(compare:)];      // Order rolls High to Low
 		
         NSInteger glitchcheck = 0;
-		glitchcheck = ((self.dicePool/2) + (self.dicePool%2));
+		glitchcheck = ((dicePool/2) + (dicePool%2));
 		
         NSString *glitch;       // Set Glitch Output
-		if (glitchcounter >= glitchcheck) {
-			if (self.hits > 0){
+		if (glitchCounter >= glitchcheck) {
+			if (hits > 0){
 				glitch = [[NSString alloc] initWithString:@"Glitch\n"];
-			} else if (self.hits == 0){
+			} else if (hits == 0){
 				glitch = [[NSString alloc] initWithString:@"Critical Glitch\n"];
 			}
 		} else {
@@ -108,7 +110,7 @@
 			rollList = [rollList stringByAppendingFormat:@"%@ ", rollToPrint];
 		}
 		
-		NSString *outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", self.dicePool, rollList, self.hits, glitch];
+		NSString *outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", dicePool, rollList, hits, glitch];
 		
 		
 		[[basicTextView textStorage] replaceCharactersInRange:NSMakeRange(0, 0)
@@ -127,59 +129,58 @@
 	NSString *glitch;
 	NSString *defaultTest;
 	NSInteger i = 0;
-	NSInteger glitchcounter = 0;
 	NSInteger glitchcheck = 0;	
 	
-    self.hits = 0;
+    diceRolls.removeAllObjects;
+    hits = 0;
+    glitchCounter = 0;
     
-	if (![advancedSkillPool intValue] && [advancedAttributePool intValue] >= 1) 
+	if (!advancedSkillPool.intValue && advancedAttributePool.intValue >= 1) 
 	{
-		self.dicePool = advancedAttributePool.intValue + advancedEdgePool.intValue + advancedModifierPool.intValue - 1;
+		dicePool = advancedAttributePool.intValue + advancedEdgePool.intValue + advancedModifierPool.intValue - 1;
 		defaultTest = [[NSString alloc] initWithString:@"Default Test\n"];
 	} else 
 	{
-		self.dicePool = advancedAttributePool.intValue + advancedSkillPool.intValue + advancedEdgePool.intValue;
-		if (self.dicePool == advancedEdgePool.intValue) {
-            self.dicePool = self.dicePool + advancedModifierPool.intValue;
+		dicePool = advancedAttributePool.intValue + advancedSkillPool.intValue + advancedEdgePool.intValue;
+		if (dicePool == advancedEdgePool.intValue) {
+            dicePool = dicePool + advancedModifierPool.intValue;
 			defaultTest = [[NSString alloc] initWithString:@"Longshot Test\n"];
 		} else {
-            self.dicePool = self.dicePool + advancedModifierPool.intValue;
+            dicePool = dicePool + advancedModifierPool.intValue;
             defaultTest = [[NSString alloc] initWithString:@""];
 	}
 	}
     
-    self.diceRolls.removeAllObjects;
-    
 	rollList = [[NSString alloc] initWithString:@"Dice Rolls: "];
 	
 	
-	if (self.dicePool > 0) {
+	if (dicePool > 0) {
 		
-		for (i = 0; i < self.dicePool; i++)
+		for (i = 0; i < dicePool; i++)
 		{
 			
 			roll = (random() % 6) + 1;
 			
 			if (roll >= 5) {
-				self.hits++;
+				hits++;
 				if (roll == 6 && advancedEdgePool.intValue && defaultTest != @"Longshot Test\n") {
-					self.dicePool++;
+					dicePool++;
 				}
 			}
 			
 			if (roll == 1) {
-				glitchcounter++;
+				glitchCounter++;
 			}
 			
-			[self.diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];
+			[diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];
 		}
 		
-		[self.diceRolls sortUsingSelector:@selector(compare:)];
+		[diceRolls sortUsingSelector:@selector(compare:)];
 		
-		glitchcheck = ((self.dicePool/2) + (self.dicePool%2));
+		glitchcheck = ((dicePool/2) + (dicePool%2));
 		
-		if (glitchcounter >= glitchcheck) {
-			if (self.hits > 0){
+		if (glitchCounter >= glitchcheck) {
+			if (hits > 0){
 				glitch = [[NSString alloc] initWithString:@"Glitch\n"];
 			} else if (self.hits == 0){
 				glitch = [[NSString alloc] initWithString:@"Critical Glitch\n"];
@@ -188,12 +189,12 @@
 			glitch = [[NSString alloc] initWithString:@" "];
 		}
 		
-		for (i = self.dicePool-1; i >= 0; i--) {
-			rollToPrint = [self.diceRolls objectAtIndex:i];
+		for (i = dicePool-1; i >= 0; i--) {
+			rollToPrint = [diceRolls objectAtIndex:i];
 			rollList = [rollList stringByAppendingFormat:@"%@ ", rollToPrint];
 		}
 		
-		NSString *outputString = [[NSString alloc] initWithFormat:@"%@Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", defaultTest, self.dicePool, rollList, self.hits, glitch];
+		NSString *outputString = [[NSString alloc] initWithFormat:@"%@Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", defaultTest, dicePool, rollList, hits, glitch];
 		
 		[[advancedTextView textStorage] replaceCharactersInRange:NSMakeRange(0, 0)
 												   withString:outputString];

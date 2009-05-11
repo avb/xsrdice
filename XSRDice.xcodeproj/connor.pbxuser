@@ -214,6 +214,17 @@
 			B3D4A93F0FB8C8A8009BC30B /* PBXTextBookmark */ = B3D4A93F0FB8C8A8009BC30B /* PBXTextBookmark */;
 			B3D4A9460FB8C9F2009BC30B /* PBXTextBookmark */ = B3D4A9460FB8C9F2009BC30B /* PBXTextBookmark */;
 			B3D4A9470FB8C9F2009BC30B /* PBXTextBookmark */ = B3D4A9470FB8C9F2009BC30B /* PBXTextBookmark */;
+			B3D4A9490FB8CC77009BC30B /* PBXTextBookmark */ = B3D4A9490FB8CC77009BC30B /* PBXTextBookmark */;
+			B3D4A94A0FB8CC77009BC30B /* PBXTextBookmark */ = B3D4A94A0FB8CC77009BC30B /* PBXTextBookmark */;
+			B3D4A94B0FB8CC77009BC30B /* PBXTextBookmark */ = B3D4A94B0FB8CC77009BC30B /* PBXTextBookmark */;
+			B3D4A94C0FB8CC77009BC30B /* PBXTextBookmark */ = B3D4A94C0FB8CC77009BC30B /* PBXTextBookmark */;
+			B3D4A94D0FB8CC77009BC30B /* PBXTextBookmark */ = B3D4A94D0FB8CC77009BC30B /* PBXTextBookmark */;
+			B3D4A94E0FB8CC77009BC30B /* PBXTextBookmark */ = B3D4A94E0FB8CC77009BC30B /* PBXTextBookmark */;
+			B3D4A94F0FB8CC77009BC30B /* PBXTextBookmark */ = B3D4A94F0FB8CC77009BC30B /* PBXTextBookmark */;
+			B3D4A9520FB8CCA3009BC30B /* PBXTextBookmark */ = B3D4A9520FB8CCA3009BC30B /* PBXTextBookmark */;
+			B3D4A9530FB8CCBB009BC30B /* PBXTextBookmark */ = B3D4A9530FB8CCBB009BC30B /* PBXTextBookmark */;
+			B3D4A95A0FB8CD94009BC30B /* PBXTextBookmark */ = B3D4A95A0FB8CD94009BC30B /* PBXTextBookmark */;
+			B3D4A95C0FB8CEC8009BC30B /* PBXTextBookmark */ = B3D4A95C0FB8CEC8009BC30B /* PBXTextBookmark */;
 		};
 		sourceControlManager = B30740370CF2E56A004480E8 /* Source Control */;
 		userBuildSettings = {
@@ -326,17 +337,18 @@
 	};
 	B30740440CF3CC09004480E8 /* XSRDice.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {854, 966}}";
-			sepNavSelRange = "{1958, 0}";
-			sepNavVisRange = "{29, 2093}";
+			sepNavIntBoundsRect = "{{0, 0}, {854, 994}}";
+			sepNavSelRange = "{2061, 0}";
+			sepNavVisRange = "{152, 2074}";
 			sepNavWindowFrame = "{{54, 482}, {750, 558}}";
 		};
 	};
 	B30740450CF3CC09004480E8 /* XSRDice.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1092, 3066}}";
-			sepNavSelRange = "{6083, 0}";
-			sepNavVisRange = "{2009, 1634}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{1521, 110}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 5905}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1032, 2996}}";
+			sepNavSelRange = "{5475, 0}";
+			sepNavVisRange = "{4412, 1384}";
 			sepNavWindowFrame = "{{943, 344}, {750, 558}}";
 		};
 	};
@@ -365,7 +377,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 24";
 		rLen = 33;
-		rLoc = 2051;
+		rLoc = 2109;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 29;
@@ -375,7 +387,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 13";
 		rLen = 0;
-		rLoc = 1702;
+		rLoc = 1724;
 		rType = 0;
 		vrLen = 275;
 		vrLoc = 3;
@@ -445,7 +457,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 204";
 		rLen = 0;
-		rLoc = 6085;
+		rLoc = 5898;
 		rType = 0;
 		vrLen = 1429;
 		vrLoc = 4460;
@@ -626,7 +638,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 119";
 		rLen = 0;
-		rLoc = 3684;
+		rLoc = 3623;
 		rType = 0;
 		vrLen = 1986;
 		vrLoc = 0;
@@ -666,7 +678,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 119";
 		rLen = 0;
-		rLoc = 3684;
+		rLoc = 3623;
 		rType = 0;
 		vrLen = 1986;
 		vrLoc = 0;
@@ -706,7 +718,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 119";
 		rLen = 0;
-		rLoc = 3684;
+		rLoc = 3623;
 		rType = 0;
 		vrLen = 1682;
 		vrLoc = 676;
@@ -726,7 +738,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 119";
 		rLen = 0;
-		rLoc = 3684;
+		rLoc = 3623;
 		rType = 0;
 		vrLen = 1342;
 		vrLoc = 1460;
@@ -746,7 +758,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 152";
 		rLen = 0;
-		rLoc = 4851;
+		rLoc = 4714;
 		rType = 0;
 		vrLen = 1324;
 		vrLoc = 4434;
@@ -776,7 +788,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 204";
 		rLen = 0;
-		rLoc = 6085;
+		rLoc = 5898;
 		rType = 0;
 		vrLen = 1429;
 		vrLoc = 4460;
@@ -877,7 +889,7 @@
 		comments = "error: statically allocated instance of Objective-C class 'NSMutableArray'";
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		rLen = 1;
-		rLoc = 60;
+		rLoc = 62;
 		rType = 1;
 	};
 	B3D4A8B60FB89BE1009BC30B /* PBXTextBookmark */ = {
@@ -885,7 +897,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2039;
+		rLoc = 2097;
 		rType = 0;
 		vrLen = 455;
 		vrLoc = 1691;
@@ -920,7 +932,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 167";
 		rLen = 0;
-		rLoc = 5016;
+		rLoc = 4869;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 4612;
@@ -930,7 +942,7 @@
 		comments = "error: statically allocated instance of Objective-C class 'NSMutableArray'";
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		rLen = 0;
-		rLoc = 41;
+		rLoc = 42;
 		rType = 1;
 	};
 	B3D4A8C40FB89BE2009BC30B /* PlistBookmark */ = {
@@ -963,7 +975,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 120";
 		rLen = 0;
-		rLoc = 3685;
+		rLoc = 3624;
 		rType = 0;
 		vrLen = 1729;
 		vrLoc = 3005;
@@ -973,7 +985,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 41";
 		rLen = 0;
-		rLoc = 1594;
+		rLoc = 1623;
 		rType = 0;
 		vrLen = 2033;
 		vrLoc = 0;
@@ -983,7 +995,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 135";
 		rLen = 0;
-		rLoc = 4395;
+		rLoc = 4315;
 		rType = 0;
 		vrLen = 1925;
 		vrLoc = 2793;
@@ -993,7 +1005,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 57";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2107;
 		rType = 0;
 		vrLen = 2073;
 		vrLoc = 0;
@@ -1003,7 +1015,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 42";
 		rLen = 0;
-		rLoc = 1702;
+		rLoc = 1724;
 		rType = 0;
 		vrLen = 1827;
 		vrLoc = 3389;
@@ -1023,7 +1035,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2107;
 		rType = 0;
 		vrLen = 2112;
 		vrLoc = 32;
@@ -1033,7 +1045,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 61";
 		rLen = 0;
-		rLoc = 2036;
+		rLoc = 2030;
 		rType = 0;
 		vrLen = 1988;
 		vrLoc = 0;
@@ -1043,7 +1055,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2107;
 		rType = 0;
 		vrLen = 2115;
 		vrLoc = 29;
@@ -1053,7 +1065,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 167";
 		rLen = 0;
-		rLoc = 5016;
+		rLoc = 4869;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 4612;
@@ -1063,7 +1075,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2039;
+		rLoc = 2097;
 		rType = 0;
 		vrLen = 2117;
 		vrLoc = 29;
@@ -1083,7 +1095,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 40";
 		rLen = 0;
-		rLoc = 1638;
+		rLoc = 1633;
 		rType = 0;
 		vrLen = 1592;
 		vrLoc = 382;
@@ -1093,7 +1105,7 @@
 		comments = "error: syntax error before ')' token";
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		rLen = 1;
-		rLoc = 60;
+		rLoc = 62;
 		rType = 1;
 	};
 	B3D4A8DE0FB8BDF9009BC30B /* PBXTextBookmark */ = {
@@ -1101,7 +1113,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 48";
 		rLen = 0;
-		rLoc = 1736;
+		rLoc = 1765;
 		rType = 0;
 		vrLen = 2114;
 		vrLoc = 32;
@@ -1111,7 +1123,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 40";
 		rLen = 0;
-		rLoc = 1638;
+		rLoc = 1633;
 		rType = 0;
 		vrLen = 1592;
 		vrLoc = 382;
@@ -1121,7 +1133,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2022;
+		rLoc = 2080;
 		rType = 0;
 		vrLen = 2140;
 		vrLoc = 3;
@@ -1141,7 +1153,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 40";
 		rLen = 0;
-		rLoc = 1638;
+		rLoc = 1633;
 		rType = 0;
 		vrLen = 1592;
 		vrLoc = 382;
@@ -1151,7 +1163,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2022;
+		rLoc = 2080;
 		rType = 0;
 		vrLen = 2117;
 		vrLoc = 32;
@@ -1161,7 +1173,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2021;
+		rLoc = 2079;
 		rType = 0;
 		vrLen = 2107;
 		vrLoc = 3;
@@ -1171,7 +1183,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 57";
 		rLen = 0;
-		rLoc = 1959;
+		rLoc = 1988;
 		rType = 0;
 		vrLen = 2122;
 		vrLoc = 29;
@@ -1181,7 +1193,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 40";
 		rLen = 0;
-		rLoc = 1638;
+		rLoc = 1633;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 1459;
@@ -1191,7 +1203,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 59";
 		rLen = 0;
-		rLoc = 2021;
+		rLoc = 2079;
 		rType = 0;
 		vrLen = 2146;
 		vrLoc = 3;
@@ -1201,7 +1213,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 42";
 		rLen = 0;
-		rLoc = 1638;
+		rLoc = 1633;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 1459;
@@ -1211,7 +1223,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 57";
 		rLen = 0;
-		rLoc = 1959;
+		rLoc = 1988;
 		rType = 0;
 		vrLen = 2133;
 		vrLoc = 29;
@@ -1221,7 +1233,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 40";
 		rLen = 0;
-		rLoc = 1638;
+		rLoc = 1633;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 1459;
@@ -1231,7 +1243,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 57";
 		rLen = 0;
-		rLoc = 1959;
+		rLoc = 1988;
 		rType = 0;
 		vrLen = 2122;
 		vrLoc = 29;
@@ -1241,7 +1253,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 79";
 		rLen = 0;
-		rLoc = 2353;
+		rLoc = 2327;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 1506;
@@ -1261,7 +1273,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 43";
 		rLen = 0;
-		rLoc = 1701;
+		rLoc = 1723;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 1459;
@@ -1271,7 +1283,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 57";
 		rLen = 0;
-		rLoc = 1858;
+		rLoc = 1844;
 		rType = 0;
 		vrLen = 1095;
 		vrLoc = 1415;
@@ -1281,7 +1293,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 40";
 		rLen = 0;
-		rLoc = 1596;
+		rLoc = 1625;
 		rType = 0;
 		vrLen = 2077;
 		vrLoc = 3;
@@ -1291,7 +1303,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 43";
 		rLen = 0;
-		rLoc = 1701;
+		rLoc = 1723;
 		rType = 0;
 		vrLen = 1384;
 		vrLoc = 1459;
@@ -1311,7 +1323,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 114";
 		rLen = 0;
-		rLoc = 3562;
+		rLoc = 3501;
 		rType = 0;
 		vrLen = 1720;
 		vrLoc = 3069;
@@ -1321,7 +1333,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 56";
 		rLen = 0;
-		rLoc = 1940;
+		rLoc = 1939;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 1895;
@@ -1331,7 +1343,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 126";
 		rLen = 0;
-		rLoc = 3769;
+		rLoc = 3728;
 		rType = 0;
 		vrLen = 1615;
 		vrLoc = 3340;
@@ -1341,7 +1353,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 188";
 		rLen = 0;
-		rLoc = 5771;
+		rLoc = 5584;
 		rType = 0;
 		vrLen = 1475;
 		vrLoc = 4610;
@@ -1351,7 +1363,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 143";
 		rLen = 0;
-		rLoc = 4513;
+		rLoc = 4427;
 		rType = 0;
 		vrLen = 1877;
 		vrLoc = 3857;
@@ -1371,7 +1383,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 57";
 		rLen = 0;
-		rLoc = 1958;
+		rLoc = 1987;
 		rType = 0;
 		vrLen = 2093;
 		vrLoc = 29;
@@ -1381,7 +1393,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 143";
 		rLen = 0;
-		rLoc = 4513;
+		rLoc = 4427;
 		rType = 0;
 		vrLen = 1877;
 		vrLoc = 3857;
@@ -1391,7 +1403,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 143";
 		rLen = 0;
-		rLoc = 4513;
+		rLoc = 4427;
 		rType = 0;
 		vrLen = 1877;
 		vrLoc = 3857;
@@ -1411,7 +1423,7 @@
 		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
 		name = "XSRDice.h: 57";
 		rLen = 0;
-		rLoc = 1958;
+		rLoc = 1987;
 		rType = 0;
 		vrLen = 2093;
 		vrLoc = 29;
@@ -1421,7 +1433,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 44";
 		rLen = 0;
-		rLoc = 1638;
+		rLoc = 1633;
 		rType = 0;
 		vrLen = 1878;
 		vrLoc = 0;
@@ -1431,7 +1443,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 44";
 		rLen = 0;
-		rLoc = 1579;
+		rLoc = 1574;
 		rType = 0;
 		vrLen = 1958;
 		vrLoc = 71;
@@ -1441,7 +1453,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 64";
 		rLen = 0;
-		rLoc = 1921;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 1432;
 		vrLoc = 966;
@@ -1451,7 +1463,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 153";
 		rLen = 0;
-		rLoc = 4554;
+		rLoc = 4432;
 		rType = 0;
 		vrLen = 1867;
 		vrLoc = 2902;
@@ -1461,7 +1473,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 67";
 		rLen = 0;
-		rLoc = 2009;
+		rLoc = 2008;
 		rType = 0;
 		vrLen = 1459;
 		vrLoc = 1522;
@@ -1471,7 +1483,7 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 215";
 		rLen = 0;
-		rLoc = 6083;
+		rLoc = 5896;
 		rType = 0;
 		vrLen = 1634;
 		vrLoc = 2009;
@@ -1481,9 +1493,119 @@
 		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
 		name = "XSRDice.m: 215";
 		rLen = 0;
-		rLoc = 6083;
+		rLoc = 5896;
 		rType = 0;
 		vrLen = 1634;
 		vrLoc = 2009;
+	};
+	B3D4A9490FB8CC77009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
+		name = "XSRDice.h: 62";
+		rLen = 0;
+		rLoc = 2061;
+		rType = 0;
+		vrLen = 2074;
+		vrLoc = 152;
+	};
+	B3D4A94A0FB8CC77009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 215";
+		rLen = 0;
+		rLoc = 5896;
+		rType = 0;
+		vrLen = 1718;
+		vrLoc = 1736;
+	};
+	B3D4A94B0FB8CC77009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 215";
+		rLen = 0;
+		rLoc = 5896;
+		rType = 0;
+		vrLen = 1459;
+		vrLoc = 1522;
+	};
+	B3D4A94C0FB8CC77009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
+		name = "XSRDice.h: 40";
+		rLen = 0;
+		rLoc = 1587;
+		rType = 0;
+		vrLen = 2093;
+		vrLoc = 29;
+	};
+	B3D4A94D0FB8CC77009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 215";
+		rLen = 0;
+		rLoc = 5896;
+		rType = 0;
+		vrLen = 1718;
+		vrLoc = 1736;
+	};
+	B3D4A94E0FB8CC77009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740440CF3CC09004480E8 /* XSRDice.h */;
+		name = "XSRDice.h: 62";
+		rLen = 0;
+		rLoc = 2061;
+		rType = 0;
+		vrLen = 2074;
+		vrLoc = 152;
+	};
+	B3D4A94F0FB8CC77009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 104";
+		rLen = 0;
+		rLoc = 2934;
+		rType = 0;
+		vrLen = 1720;
+		vrLoc = 1808;
+	};
+	B3D4A9520FB8CCA3009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 57";
+		rLen = 0;
+		rLoc = 1781;
+		rType = 0;
+		vrLen = 1129;
+		vrLoc = 1451;
+	};
+	B3D4A9530FB8CCBB009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 66";
+		rLen = 0;
+		rLoc = 1939;
+		rType = 0;
+		vrLen = 1122;
+		vrLoc = 1451;
+	};
+	B3D4A95A0FB8CD94009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 113";
+		rLen = 0;
+		rLoc = 3298;
+		rType = 0;
+		vrLen = 1630;
+		vrLoc = 1871;
+	};
+	B3D4A95C0FB8CEC8009BC30B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B30740450CF3CC09004480E8 /* XSRDice.m */;
+		name = "XSRDice.m: 197";
+		rLen = 0;
+		rLoc = 5584;
+		rType = 0;
+		vrLen = 1384;
+		vrLoc = 4521;
 	};
 }
