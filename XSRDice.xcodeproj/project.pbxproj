@@ -16,6 +16,7 @@
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		B30740460CF3CC09004480E8 /* XSRDice.m in Sources */ = {isa = PBXBuildFile; fileRef = B30740450CF3CC09004480E8 /* XSRDice.m */; };
 		B3AD03B50CF5513300B40F64 /* XSRDice.icns in Resources */ = {isa = PBXBuildFile; fileRef = B3AD03B40CF5513300B40F64 /* XSRDice.icns */; };
+		B3D4A95F0FB8DD85009BC30B /* mt19937ar.c in Sources */ = {isa = PBXBuildFile; fileRef = B3D4A95E0FB8DD84009BC30B /* mt19937ar.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		B30740440CF3CC09004480E8 /* XSRDice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSRDice.h; sourceTree = "<group>"; };
 		B30740450CF3CC09004480E8 /* XSRDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSRDice.m; sourceTree = "<group>"; };
 		B3AD03B40CF5513300B40F64 /* XSRDice.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = XSRDice.icns; sourceTree = "<group>"; };
+		B3D4A95D0FB8DD84009BC30B /* mt19937ar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mt19937ar.h; sourceTree = "<group>"; };
+		B3D4A95E0FB8DD84009BC30B /* mt19937ar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mt19937ar.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B3D4A9800FB8E4FF009BC30B /* MT */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
 				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
 				B30740440CF3CC09004480E8 /* XSRDice.h */,
@@ -128,6 +132,15 @@
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3D4A9800FB8E4FF009BC30B /* MT */ = {
+			isa = PBXGroup;
+			children = (
+				B3D4A95D0FB8DD84009BC30B /* mt19937ar.h */,
+				B3D4A95E0FB8DD84009BC30B /* mt19937ar.c */,
+			);
+			name = MT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +207,7 @@
 				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				B30740460CF3CC09004480E8 /* XSRDice.m in Sources */,
+				B3D4A95F0FB8DD85009BC30B /* mt19937ar.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,6 +36,7 @@
 
 
 @interface XSRDice : NSObject {
+//    NSInteger dieRoll;
 	NSInteger dicePool;
     NSInteger hits;
     NSInteger glitchCounter;
@@ -57,6 +58,7 @@
 
 - (id)init;
 
+//@property int dieRoll;
 @property int dicePool;
 @property int hits;
 @property int glitchCounter;

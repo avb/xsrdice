@@ -32,8 +32,10 @@
 //  
 //
 
-#import "XSRDice.h"
+#define DSFMT_MEXP 216091
 
+#import "XSRDice.h"
+#import "mt19937ar.h"
 
 @implementation XSRDice
 
@@ -41,15 +43,21 @@
 {
     if (self = [super init])
     {
+        init_genrand(time(0));
         diceRolls = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
+//@synthesize dieRoll;
 @synthesize dicePool;
 @synthesize hits;
 @synthesize diceRolls;
 @synthesize glitchCounter;
+
+/*- (int) dieRoll {
+    return (random()
+}*/
 
 - (IBAction)rollBasic:(id)sender
 {
@@ -72,7 +80,7 @@
 	{
 		for (i = 0; i < dicePool; i++)      // Roll Dice
 		{
-			roll = (random() % 6) + 1;
+			roll = (genrand_int32() % 6) + 1;
 			
 			if (roll >= 5) {        // Hit Counter
 				hits++;
@@ -159,7 +167,7 @@
 		for (i = 0; i < dicePool; i++)
 		{
 			
-			roll = (random() % 6) + 1;
+			roll = (genrand_int32() % 6) + 1;
 			
 			if (roll >= 5) {
 				hits++;
