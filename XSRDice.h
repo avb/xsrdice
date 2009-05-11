@@ -36,7 +36,10 @@
 
 
 @interface XSRDice : NSObject {
-	
+	NSInteger dicePool;
+    NSInteger hits;
+    NSMutableArray *diceRolls;
+    
 	NSInteger basicRuleOfSix;
 	
 	NSCalendarDate *rollDate;
@@ -50,6 +53,12 @@
 	IBOutlet NSTextView *basicTextView;
 	IBOutlet NSTextView *advancedTextView;
 }
+
+- (id)init;
+
+@property int dicePool;
+@property int hits;
+@property (retain) NSMutableArray *diceRolls;
 
 - (IBAction)rollBasic:(id)sender;
 - (IBAction)rollAdvanced:(id)sender;

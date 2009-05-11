@@ -37,33 +37,45 @@
 
 @implementation XSRDice
 
+- (id) init 
+{
+    if (self = [super init])
+    {
+        self.diceRolls = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+@synthesize dicePool;
+@synthesize hits;
+@synthesize diceRolls;
+
 - (IBAction)rollBasic:(id)sender
 {
-	NSInteger dicePool;
     NSInteger roll;
     NSInteger glitchcounter = 0;
-	NSInteger hits = 0;    
     NSInteger i;
     
-	NSMutableArray *diceRolls;
 	NSString *rollList;
 	
     
-    dicePool = [basicDicePool intValue];
-	diceRolls = [[NSMutableArray alloc] init];
+    self.dicePool = basicDicePool.intValue;
+    self.diceRolls.removeAllObjects;
+    self.hits = 0;
+    
 	rollList = [[NSString alloc] initWithString:@"Dice Rolls: "];
 
 
-	if (dicePool > 0) 
+	if (self.dicePool > 0) 
 	{
-		for (i = 0; i < dicePool; i++)      // Roll Dice
+		for (i = 0; i < self.dicePool; i++)      // Roll Dice
 		{
 			roll = (random() % 6) + 1;
 			
 			if (roll >= 5) {        // Hit Counter
-				hits++;
+				self.hits++;
 				if (roll == 6 && basicRuleOfSix == 1) {
-					dicePool++;
+					self.dicePool++;
 				}
 			}
 			
@@ -71,19 +83,19 @@
 				glitchcounter++;
 			}
 			
-			[diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];   // Insert roll into array
+			[self.diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];   // Insert roll into array
 		}
 
-		[diceRolls sortUsingSelector:@selector(compare:)];      // Order rolls High to Low
+		[self.diceRolls sortUsingSelector:@selector(compare:)];      // Order rolls High to Low
 		
         NSInteger glitchcheck = 0;
-		glitchcheck = ((dicePool/2) + (dicePool%2));
+		glitchcheck = ((self.dicePool/2) + (self.dicePool%2));
 		
         NSString *glitch;       // Set Glitch Output
 		if (glitchcounter >= glitchcheck) {
-			if (hits > 0){
+			if (self.hits > 0){
 				glitch = [[NSString alloc] initWithString:@"Glitch\n"];
-			} else if (hits == 0){
+			} else if (self.hits == 0){
 				glitch = [[NSString alloc] initWithString:@"Critical Glitch\n"];
 			}
 		} else {
@@ -91,12 +103,12 @@
 		}
 		
         NSString *rollToPrint;      // Set Roll Output
-		for (i = dicePool-1; i >= 0; i--) {
-			rollToPrint = [diceRolls objectAtIndex:i];
+		for (i = self.dicePool-1; i >= 0; i--) {
+			rollToPrint = [self.diceRolls objectAtIndex:i];
 			rollList = [rollList stringByAppendingFormat:@"%@ ", rollToPrint];
 		}
 		
-		NSString *outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", dicePool, rollList, hits, glitch];
+		NSString *outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", self.dicePool, rollList, self.hits, glitch];
 		
 		
 		[[basicTextView textStorage] replaceCharactersInRange:NSMakeRange(0, 0)
@@ -109,48 +121,49 @@
 
 - (IBAction)rollAdvanced:(id)sender
 {
-	NSInteger dicePool;
 	NSInteger roll;
 	NSString *rollToPrint;
-	NSMutableArray *diceRolls;
 	NSString *rollList;
 	NSString *glitch;
 	NSString *defaultTest;
 	NSInteger i = 0;
-	NSInteger hits = 0;
 	NSInteger glitchcounter = 0;
 	NSInteger glitchcheck = 0;	
 	
+    self.hits = 0;
+    
 	if (![advancedSkillPool intValue] && [advancedAttributePool intValue] >= 1) 
 	{
-		dicePool = [advancedAttributePool intValue] + [advancedEdgePool intValue] + [advancedModifierPool intValue] - 1;
+		self.dicePool = advancedAttributePool.intValue + advancedEdgePool.intValue + advancedModifierPool.intValue - 1;
 		defaultTest = [[NSString alloc] initWithString:@"Default Test\n"];
 	} else 
 	{
-		dicePool = [advancedAttributePool intValue] + [advancedSkillPool intValue] + [advancedEdgePool intValue];
-		if (dicePool == [advancedEdgePool intValue]) {
-            dicePool = dicePool + [advancedModifierPool intValue];
+		self.dicePool = advancedAttributePool.intValue + advancedSkillPool.intValue + advancedEdgePool.intValue;
+		if (self.dicePool == advancedEdgePool.intValue) {
+            self.dicePool = self.dicePool + advancedModifierPool.intValue;
 			defaultTest = [[NSString alloc] initWithString:@"Longshot Test\n"];
 		} else {
-            dicePool = dicePool + [advancedModifierPool intValue];
+            self.dicePool = self.dicePool + advancedModifierPool.intValue;
             defaultTest = [[NSString alloc] initWithString:@""];
 	}
 	}
-	diceRolls = [[NSMutableArray alloc] init];
+    
+    self.diceRolls.removeAllObjects;
+    
 	rollList = [[NSString alloc] initWithString:@"Dice Rolls: "];
 	
 	
-	if (dicePool > 0) {
+	if (self.dicePool > 0) {
 		
-		for (i = 0; i < dicePool; i++)
+		for (i = 0; i < self.dicePool; i++)
 		{
 			
 			roll = (random() % 6) + 1;
 			
 			if (roll >= 5) {
-				hits++;
-				if (roll == 6 && [advancedEdgePool intValue] && defaultTest != @"Longshot Test\n") {
-					dicePool++;
+				self.hits++;
+				if (roll == 6 && advancedEdgePool.intValue && defaultTest != @"Longshot Test\n") {
+					self.dicePool++;
 				}
 			}
 			
@@ -158,29 +171,29 @@
 				glitchcounter++;
 			}
 			
-			[diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];
+			[self.diceRolls insertObject:[NSNumber numberWithInt:roll] atIndex:i];
 		}
 		
-		[diceRolls sortUsingSelector:@selector(compare:)];
+		[self.diceRolls sortUsingSelector:@selector(compare:)];
 		
-		glitchcheck = ((dicePool/2) + (dicePool%2));
+		glitchcheck = ((self.dicePool/2) + (self.dicePool%2));
 		
 		if (glitchcounter >= glitchcheck) {
-			if (hits > 0){
+			if (self.hits > 0){
 				glitch = [[NSString alloc] initWithString:@"Glitch\n"];
-			} else if (hits == 0){
+			} else if (self.hits == 0){
 				glitch = [[NSString alloc] initWithString:@"Critical Glitch\n"];
 			}
 		} else {
 			glitch = [[NSString alloc] initWithString:@" "];
 		}
 		
-		for (i = dicePool-1; i >= 0; i--) {
-			rollToPrint = [diceRolls objectAtIndex:i];
+		for (i = self.dicePool-1; i >= 0; i--) {
+			rollToPrint = [self.diceRolls objectAtIndex:i];
 			rollList = [rollList stringByAppendingFormat:@"%@ ", rollToPrint];
 		}
 		
-		NSString *outputString = [[NSString alloc] initWithFormat:@"%@Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", defaultTest, dicePool, rollList, hits, glitch];
+		NSString *outputString = [[NSString alloc] initWithFormat:@"%@Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", defaultTest, self.dicePool, rollList, self.hits, glitch];
 		
 		[[advancedTextView textStorage] replaceCharactersInRange:NSMakeRange(0, 0)
 												   withString:outputString];
@@ -199,7 +212,6 @@
     } else {
         basicRuleOfSix = 0;
     }
-    NSLog(@"basicRuleofSix = %d", basicRuleOfSix);
 }
 
 
