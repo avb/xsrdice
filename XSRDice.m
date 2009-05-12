@@ -192,7 +192,7 @@
     {
         outputString = [[NSString alloc] initWithFormat:@"%@Total Dice Pool: %d \nEdge Added: %d \n%@\nNumber of Hits: %d\n%@\n", defaultTest, dicePool, edgeDicePool, rollList, hits, glitch];
     } else {
-        outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \nEdge Added: %d \n%@\nNumber of Hits: %d\n%@\nEdge Added: %d\n", dicePool, edgeDicePool, rollList, hits, glitch];
+        outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \nEdge Added: %d \n%@\nNumber of Hits: %d\n%@\n", dicePool, edgeDicePool, rollList, hits, glitch];
     }
     
     [[outputTextView textStorage] replaceCharactersInRange:NSMakeRange(0, 0)
@@ -210,7 +210,6 @@
     for (i = 0; i < counter; i++)
     {
         j = [[diceRolls objectAtIndex:i] intValue];
-        NSLog(@"diceRolls value: %d", j);
         if (j < 5)
         {
 			NSInteger roll;
@@ -224,12 +223,9 @@
 			if (roll == 1) {
 				glitchCounter++;
 			}
-            NSLog(@"Array Before: %d", [[diceRolls objectAtIndex:i] intValue]);		
+
             [diceRolls replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:roll]];
-            NSLog(@"Array Before: %d", [[diceRolls objectAtIndex:i] intValue]);			            
-            NSLog(@"Roll: %d", roll);
         } 
-        NSLog(@"Pass: %d", i);
     }
     
     [diceRolls sortUsingSelector:@selector(compare:)];
