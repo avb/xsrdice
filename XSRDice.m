@@ -32,8 +32,6 @@
 //  
 //
 
-#define DSFMT_MEXP 216091
-
 #import "XSRDice.h"
 #import "mt19937ar.h"
 
@@ -135,6 +133,73 @@
 	} else {
 		NSBeep();
 	}
+}
+
+- (IBAction)reRollAddEdge:(id)sender
+{
+    NSInteger edgeDicePool = advancedEdgePool.intValue;
+    
+    int i;
+    for (i = 0; i < advancedEdgePool.intValue; i++)
+    {
+        NSInteger roll;
+        roll = (genrand_int32() % 6) + 1;
+        
+        if (roll >= 5) {
+            hits++;
+            if (roll == 6) {
+                edgeDicePool++;
+            }
+        }
+        
+        if (roll == 1) {
+            glitchCounter++;
+        }
+        
+        [diceRolls addObject:[NSNumber numberWithInt:roll]];
+    }
+    
+	[diceRolls sortUsingSelector:@selector(compare:)];
+
+    NSInteger totalPool = dicePool + edgeDicePool;
+    NSInteger glitchcheck = 0;
+    glitchcheck = ((totalPool/2) + (totalPool%2));
+    
+    NSString *glitch;       // Set Glitch Output
+    if (glitchCounter >= glitchcheck) {
+        if (hits > 0){
+            glitch = [[NSString alloc] initWithString:@"Glitch\n"];
+        } else if (self.hits == 0){
+            glitch = [[NSString alloc] initWithString:@"Critical Glitch\n"];
+        }
+    } else {
+        glitch = [[NSString alloc] initWithString:@" "];
+    }
+    
+    NSString *rollToPrint;      // Set Roll Output
+    NSString *rollList;
+    rollList = [[NSString alloc] initWithString:@"Dice Rolls: "];
+
+    for (i = ([diceRolls count] - 1); i >= 0; i--) {
+        rollToPrint = [diceRolls objectAtIndex:i];
+        rollList = [rollList stringByAppendingFormat:@"%@ ", rollToPrint];
+    }
+    
+    NSString *outputString;
+    outputString = [[NSString alloc] init];
+    
+    if (defaultTest)
+    {
+        outputString = [[NSString alloc] initWithFormat:@"%@Total Dice Pool: %d \nEdge Added: %d \n%@\nNumber of Hits: %d\n%@\n", defaultTest, dicePool, edgeDicePool, rollList, hits, glitch];
+    } else {
+        outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \nEdge Added: %d \n%@\nNumber of Hits: %d\n%@\nEdge Added: %d\n", dicePool, edgeDicePool, rollList, hits, glitch];
+    }
+    
+    [[outputTextView textStorage] replaceCharactersInRange:NSMakeRange(0, 0)
+                                                withString:outputString];
+    
+    
+    
 }
 
 - (IBAction)rollBasic:(id)sender
