@@ -36,11 +36,12 @@
 
 
 @interface XSRDice : NSObject {
-//    NSInteger dieRoll;
+    NSInteger dieRoll;
 	NSInteger dicePool;
     NSInteger hits;
     NSInteger glitchCounter;
     NSMutableArray *diceRolls;
+    NSString *defaultTest;
     
 	NSInteger basicRuleOfSix;
 	
@@ -52,17 +53,18 @@
 	IBOutlet NSTextField *advancedEdgePool;
 	IBOutlet NSTextField *advancedModifierPool;
 	
-	IBOutlet NSTextView *basicTextView;
-	IBOutlet NSTextView *advancedTextView;
+	IBOutlet NSTextView *outputTextView;
 }
 
 - (id)init;
+- (void)rollDice;
 
-//@property int dieRoll;
+@property int dieRoll;
 @property int dicePool;
 @property int hits;
 @property int glitchCounter;
 @property (retain) NSMutableArray *diceRolls;
+@property (retain) NSString *defaultTest;
 
 - (IBAction)rollBasic:(id)sender;
 - (IBAction)rollAdvanced:(id)sender;
