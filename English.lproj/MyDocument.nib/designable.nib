@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100534"/>
+			<integer value="100264"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -285,13 +285,13 @@
 													<int key="NSPeriodicInterval">75</int>
 												</object>
 											</object>
-											<object class="NSButton" id="250273707">
+											<object class="NSButton" id="213235444">
 												<reference key="NSNextResponder" ref="140290192"/>
 												<int key="NSvFlags">268</int>
 												<string key="NSFrame">{{218, 32}, {81, 17}}</string>
 												<reference key="NSSuperview" ref="140290192"/>
 												<bool key="NSEnabled">YES</bool>
-												<object class="NSButtonCell" key="NSCell" id="1029746590">
+												<object class="NSButtonCell" key="NSCell" id="635939305">
 													<int key="NSCellFlags">-2080244224</int>
 													<int key="NSCellFlags2">134479872</int>
 													<string key="NSContents">Re-Roll Missed</string>
@@ -300,10 +300,10 @@
 														<double key="NSSize">9.000000e+00</double>
 														<int key="NSfFlags">3614</int>
 													</object>
-													<reference key="NSControlView" ref="250273707"/>
+													<reference key="NSControlView" ref="213235444"/>
 													<int key="NSButtonFlags">-2038021889</int>
 													<int key="NSButtonFlags2">164</int>
-													<object class="NSFont" key="NSAlternateImage" id="144799570">
+													<object class="NSFont" key="NSAlternateImage" id="368190600">
 														<string key="NSName">LucidaGrande</string>
 														<double key="NSSize">9.000000e+00</double>
 														<int key="NSfFlags">16</int>
@@ -314,21 +314,21 @@
 													<int key="NSPeriodicInterval">75</int>
 												</object>
 											</object>
-											<object class="NSButton" id="380944557">
+											<object class="NSButton" id="221652397">
 												<reference key="NSNextResponder" ref="140290192"/>
 												<int key="NSvFlags">268</int>
 												<string key="NSFrame">{{218, 9}, {81, 17}}</string>
 												<reference key="NSSuperview" ref="140290192"/>
 												<bool key="NSEnabled">YES</bool>
-												<object class="NSButtonCell" key="NSCell" id="906624242">
+												<object class="NSButtonCell" key="NSCell" id="901195311">
 													<int key="NSCellFlags">-2080244224</int>
 													<int key="NSCellFlags2">134479872</int>
 													<string key="NSContents">Add Edge</string>
 													<reference key="NSSupport" ref="22"/>
-													<reference key="NSControlView" ref="380944557"/>
+													<reference key="NSControlView" ref="221652397"/>
 													<int key="NSButtonFlags">-2038021889</int>
 													<int key="NSButtonFlags2">164</int>
-													<reference key="NSAlternateImage" ref="144799570"/>
+													<reference key="NSAlternateImage" ref="368190600"/>
 													<string key="NSAlternateContents"/>
 													<string key="NSKeyEquivalent"/>
 													<int key="NSPeriodicDelay">400</int>
@@ -905,9 +905,17 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">reRollAddEdge:</string>
 						<reference key="source" ref="667685292"/>
-						<reference key="destination" ref="906624242"/>
+						<reference key="destination" ref="901195311"/>
 					</object>
 					<int key="connectionID">100537</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">reRollMissed:</string>
+						<reference key="source" ref="667685292"/>
+						<reference key="destination" ref="213235444"/>
+					</object>
+					<int key="connectionID">100538</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1097,8 +1105,8 @@
 							<reference ref="883911383"/>
 							<reference ref="159216752"/>
 							<reference ref="353576203"/>
-							<reference ref="250273707"/>
-							<reference ref="380944557"/>
+							<reference ref="213235444"/>
+							<reference ref="221652397"/>
 						</object>
 						<reference key="parent" ref="677182108"/>
 					</object>
@@ -1292,31 +1300,31 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100532</int>
-						<reference key="object" ref="250273707"/>
+						<reference key="object" ref="213235444"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1029746590"/>
+							<reference ref="635939305"/>
 						</object>
 						<reference key="parent" ref="140290192"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100533</int>
-						<reference key="object" ref="1029746590"/>
-						<reference key="parent" ref="250273707"/>
+						<reference key="object" ref="635939305"/>
+						<reference key="parent" ref="213235444"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100534</int>
-						<reference key="object" ref="380944557"/>
+						<reference key="object" ref="221652397"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="906624242"/>
+							<reference ref="901195311"/>
 						</object>
 						<reference key="parent" ref="140290192"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100535</int>
-						<reference key="object" ref="906624242"/>
-						<reference key="parent" ref="380944557"/>
+						<reference key="object" ref="901195311"/>
+						<reference key="parent" ref="221652397"/>
 					</object>
 				</object>
 			</object>
@@ -1483,7 +1491,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100537</int>
+			<int key="maxID">100538</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1505,11 +1513,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>basicRuleOfSix:</string>
 							<string>reRollAddEdge:</string>
+							<string>reRollMissed:</string>
 							<string>rollAdvanced:</string>
 							<string>rollBasic:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

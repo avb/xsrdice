@@ -72,7 +72,7 @@
 - (IBAction)rollBasic:(id)sender;
 - (IBAction)rollAdvanced:(id)sender;
 - (IBAction)reRollAddEdge:(id)sender;
-
+- (IBAction)reRollMissed:(id)sender;
 - (IBAction)basicRuleOfSix:(id)sender;
 
 @end

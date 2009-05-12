@@ -202,6 +202,78 @@
     
 }
 
+- (IBAction) reRollMissed:(id)sender
+{
+    int i;
+    int j;
+    int counter = [diceRolls count];
+    for (i = 0; i < counter; i++)
+    {
+        j = [[diceRolls objectAtIndex:i] intValue];
+        NSLog(@"diceRolls value: %d", j);
+        if (j < 5)
+        {
+			NSInteger roll;
+			roll = (genrand_int32() % 6) + 1;
+			
+			if (roll >= 5) 
+            {
+				hits++;
+			}
+			
+			if (roll == 1) {
+				glitchCounter++;
+			}
+            NSLog(@"Array Before: %d", [[diceRolls objectAtIndex:i] intValue]);		
+            [diceRolls replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:roll]];
+            NSLog(@"Array Before: %d", [[diceRolls objectAtIndex:i] intValue]);			            
+            NSLog(@"Roll: %d", roll);
+        } 
+        NSLog(@"Pass: %d", i);
+    }
+    
+    [diceRolls sortUsingSelector:@selector(compare:)];
+    
+    
+    NSInteger glitchcheck = 0;
+    glitchcheck = ((dicePool/2) + (dicePool%2));
+    
+    NSString *glitch;       // Set Glitch Output
+    if (glitchCounter >= glitchcheck) {
+        if (hits > 0){
+            glitch = [[NSString alloc] initWithString:@"Glitch\n"];
+        } else if (self.hits == 0){
+            glitch = [[NSString alloc] initWithString:@"Critical Glitch\n"];
+        }
+    } else {
+        glitch = [[NSString alloc] initWithString:@" "];
+    }
+    
+    NSString *rollToPrint;      // Set Roll Output
+    NSString *rollList;
+    rollList = [[NSString alloc] initWithString:@"Dice Rolls: "];
+
+    for (i = dicePool-1; i >= 0; i--) {
+        rollToPrint = [diceRolls objectAtIndex:i];
+        rollList = [rollList stringByAppendingFormat:@"%@ ", rollToPrint];
+    }
+    
+    NSString *outputString;
+    outputString = [[NSString alloc] init];
+    
+    if (defaultTest)
+    {
+        outputString = [[NSString alloc] initWithFormat:@"%@Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", defaultTest, dicePool, rollList, hits, glitch];
+    } else {
+        outputString = [[NSString alloc] initWithFormat:@"Total Dice Pool: %d \n%@\nNumber of Hits: %d\n%@\n", dicePool, rollList, hits, glitch];
+    }
+    
+    [[outputTextView textStorage] replaceCharactersInRange:NSMakeRange(0, 0)
+                                                withString:outputString]; 
+    NSLog(@"reroll");
+	
+}
+
 - (IBAction)rollBasic:(id)sender
 {
     dicePool = basicDicePool.intValue;
