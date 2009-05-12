@@ -46,7 +46,7 @@
 	NSInteger basicRuleOfSix;
 	
 	NSCalendarDate *rollDate;
-	
+    
 	IBOutlet NSTextField *basicDicePool;
 	IBOutlet NSTextField *advancedAttributePool;
 	IBOutlet NSTextField *advancedSkillPool;
@@ -54,6 +54,9 @@
 	IBOutlet NSTextField *advancedModifierPool;
 	
 	IBOutlet NSTextView *outputTextView;
+    IBOutlet NSTabView *tabView;
+
+
 }
 
 - (id)init;
