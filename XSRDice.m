@@ -55,9 +55,9 @@
 @synthesize glitchCounter;
 @synthesize defaultTest;
 
-- (int) dieRoll 
+- (NSInteger) dieRoll 
 {
-    int roll = (genrand_int32() % 6) + 1;
+    NSInteger roll = (genrand_int32() % 6) + 1;
     return roll;
 }
 

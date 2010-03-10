@@ -62,10 +62,10 @@
 - (id)init;
 - (void)rollDice;
 
-@property int dieRoll;
-@property int dicePool;
-@property int hits;
-@property int glitchCounter;
+@property NSInteger dieRoll;
+@property NSInteger dicePool;
+@property NSInteger hits;
+@property NSInteger glitchCounter;
 @property (retain) NSMutableArray *diceRolls;
 @property (retain) NSString *defaultTest;
 
